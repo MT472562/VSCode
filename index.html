@@ -5,6 +5,26 @@
 <meta charset="utf-8">
 </head>
 <body>
-  <video src="【アニメ】五月病のあなたへ.mp4"loop autoplay muted></video>
+  <div id="div">
+<p>再生しますか？</p>
+<button id="yes">Yes</button><button id="no">No</button>
+</div>
+<script>
+    const div = document.getElementById("div");
+const yesButton = document.getElementById("yes");
+const noButton = document.getElementById("no");
+const audio = new Audio("/Users/taikimaruyama/Desktop/プログラミング/練習用/BGM.wav");
+function hideDiv() {
+div.style.display = "none";
+}
+yesButton.addEventListener("click", () => {
+audio.play();
+hideDiv();
+});
+noButton.addEventListener("click", () => {
+hideDiv();
+});
+</script>
+  <video src="【アニメ】五月病のあなたへ.mp4"autoplay muted></video>
   </body>
 </html>
